@@ -9,4 +9,8 @@ public class EstacionEntity extends BaseEntity {
     private String name;
     private String direccion;
     private Integer capacidad;
+    
+    @ManyToMany(mappedBy = "estaciones")
+    private List<RutaEntity> rutas = new ArrayList<>();
 }
+
